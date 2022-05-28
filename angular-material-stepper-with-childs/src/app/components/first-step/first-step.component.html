@@ -1,0 +1,19 @@
+<mat-card>
+  <form [formGroup]="frmStepOne">
+    <mat-form-field>
+      <input
+        matInput
+        formControlName="name"
+        matInput
+        placeholder="Name"
+        required
+      />
+    </mat-form-field>
+
+    <mat-card-actions>
+      <button mat-raised-button matStepperNext class="nav-btn pull-right">
+        Next
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
