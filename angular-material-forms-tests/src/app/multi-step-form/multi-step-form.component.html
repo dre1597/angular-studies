@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-vertical-stepper linear #stepper>
+    <mat-step [stepControl]="formStepOneControl | async">
+      <ng-template matStepLabel> Personal Information </ng-template>
+      <app-personal-information-form
+        #formStepOne
+      ></app-personal-information-form>
+    </mat-step>
+
+    <mat-step [stepControl]="formStepTwoControl | async">
+      <ng-template matStepLabel> Opening information </ng-template>
+      <app-opening-information-form #formStepTwo></app-opening-information-form>
+    </mat-step>
+
+    <mat-step>
+      <ng-template matStepLabel> Confirmation </ng-template>
+      <app-confirmation-form #formStepThree></app-confirmation-form>
+    </mat-step>
+  </mat-vertical-stepper>
+</mat-card>
