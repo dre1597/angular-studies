@@ -1,0 +1,23 @@
+<app-parent></app-parent>
+<app-content>
+  <h2 question>A question?</h2>
+  <h4 answer>A answer.</h4>
+</app-content>
+
+<button (click)="toggleText($event)">Toggle text</button>
+{{showText}}
+
+
+{{todaysDate | date}}
+<br>
+{{todaysDate | date : 'short'}}
+<br>
+{{todaysDate | date : 'long'}}
+<br>
+{{todaysDate | date : 'long' | uppercase}}
+<br>
+{{money | currency : 'BRL'}}
+<br>
+{{'World' | greetingsPipe}}
+
+<app-phone></app-phone>
