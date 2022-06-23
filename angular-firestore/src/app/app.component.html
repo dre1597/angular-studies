@@ -1,0 +1,6 @@
+<form>
+  <input type="file" accept="image/*" (change)="showPreview($event)" />
+  <img [src]="imageSrc" width="250px" height="150px" alt="image preview" />
+
+  <button type="button" (click)="sendImage()">Enviar</button>
+</form>
