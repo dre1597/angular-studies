@@ -35,8 +35,11 @@ export class AppComponent {
   sendImage() {
     if (this.selectedImage) {
       this._uploadImage();
-      console.log(this.imageUrl);
     }
+  }
+
+  sendForm() {
+    console.log(this.imageUrl);
   }
 
   private _uploadImage(): void {
