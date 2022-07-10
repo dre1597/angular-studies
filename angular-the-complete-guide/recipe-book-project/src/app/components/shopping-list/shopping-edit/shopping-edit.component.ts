@@ -12,7 +12,7 @@ export class ShoppingEditComponent {
 
   constructor(private shoppingListService: ShoppingListService) {}
 
-  onAddItem() {
+  onAddItem(): void {
     const ingredientName = this.nameInputRef.nativeElement.value;
     const ingredientAmount = this.amountInputRef.nativeElement.value;
 

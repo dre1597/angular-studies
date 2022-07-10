@@ -12,7 +12,7 @@ export class ShoppingListComponent {
 
   constructor(private shoppingListService: ShoppingListService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.ingredients = this.shoppingListService.getIngredients();
     this.shoppingListService.ingredientsChanged.subscribe((ingredients) => {
       this.ingredients = ingredients;
