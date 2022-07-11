@@ -1,5 +1,6 @@
-import { Injectable, EventEmitter } from '@angular/core';
-import { Ingredient } from 'src/app/common/models/ingredient.model';
+import { Injectable } from '@angular/core';
+
+import { Ingredient } from '../../../app/common/models/ingredient.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { Recipe } from './recipe.model';
 
@@ -27,8 +28,6 @@ export class RecipeService {
       'https://cdn.pixabay.com/photo/2016/06/15/19/09/food-1459693_960_720.jpg'
     ),
   ];
-
-  recipeSelected = new EventEmitter<Recipe>();
 
   constructor(private shoppingListService: ShoppingListService) {}
 
