@@ -1,0 +1,7 @@
+<button *ngIf="!value" [disabled]="winner">{{ value }}</button>
+<button class="btn btn-success" *ngIf="value === 'X'" [disabled]="winner">
+  {{ value }}
+</button>
+<button class="btn btn-info" *ngIf="value === 'O'" [disabled]="winner">
+  {{ value }}
+</button>
