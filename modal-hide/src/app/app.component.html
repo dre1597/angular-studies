@@ -1,1 +1,15 @@
-<button (click)="openModal()">Open modal</button>
+<!--<button (click)="openModal()">Open modal</button>-->
+<button (click)="modal.toggle()">
+  Mostrar modal
+</button>
+
+<app-custom-modal #modal>
+  <button
+    (click)="modal.toggle();"
+    class="btn-primario">Ação
+  </button>
+
+  <button
+    class="btn-secundario">Ação 2
+  </button>
+</app-custom-modal>
