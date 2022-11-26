@@ -1,0 +1,14 @@
+<button (click)="toggleSecret()">Display Details</button>
+<p *ngIf="show">Secret: 101</p>
+
+<h3>logs</h3>
+<ul>
+  <li *ngFor="let log of logs; let i = index">
+    <p
+      [ngClass]="(i + 1) >= 5 ? 'color-white' : ''"
+      [ngStyle]="{'background-color': (i + 1) >= 5 ? 'blue' : 'white'}"
+    >
+      Clicked {{i + 1}} {{i + 1 <= 1 ? 'time' : 'times'}}! With the change of {{log}}
+    </p>
+  </li>
+</ul>
