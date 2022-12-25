@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, map, Observable, Subject, throwError } from 'rxjs';
 
@@ -29,7 +29,14 @@ export class PostsService {
   }
 
   fetchPosts(): Observable<Post[]> {
-    return this.http.get<{ [key: string]: Post }>(`${environment.baseUrl}/posts.json`)
+    // let searchParams = new HttpParams();
+    // searchParams = searchParams.append('print', 'pretty')
+    // searchParams = searchParams.append('key', 'value')
+
+    return this.http.get<{ [key: string]: Post }>(`${environment.baseUrl}/posts.json`, {
+      headers: new HttpHeaders({'Custom-Header': 'Hello'}),
+      params: new HttpParams().set('print', 'pretty')
+    })
       .pipe(map((responseData) => {
             const postsArrays: Post[] = [];
             for (const key in responseData) {
