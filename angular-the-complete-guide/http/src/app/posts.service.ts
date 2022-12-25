@@ -16,7 +16,10 @@ export class PostsService {
     this.http
       .post<{ name: string }>(
         `${environment.baseUrl}/posts.json`,
-        postData
+        postData,
+        {
+          observe: 'response'
+        }
       )
       .subscribe({
         next: (responseData) => {
