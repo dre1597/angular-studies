@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 import { Post } from './post.model';
@@ -13,7 +12,7 @@ export class AppComponent implements OnInit {
   loadedPosts: Post[] = [];
   isFetching = false;
 
-  constructor(private http: HttpClient, private postService: PostsService) {
+  constructor(private postService: PostsService) {
   }
 
   ngOnInit(): void {
@@ -21,7 +20,6 @@ export class AppComponent implements OnInit {
   }
 
   onCreatePost(postData: Post): void {
-    // Send Http request
     this.postService.createAndStorePost(postData);
   }
 
@@ -29,8 +27,10 @@ export class AppComponent implements OnInit {
     this.fetchPosts();
   }
 
-  onClearPosts() {
-    // Send Http request
+  onClearPosts(): void {
+    this.postService.deletePosts().subscribe(() => {
+      this.loadedPosts = [];
+    });
   }
 
   private fetchPosts(): void {
