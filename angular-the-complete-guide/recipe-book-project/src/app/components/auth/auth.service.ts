@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { catchError, Observable } from 'rxjs';
 
 import { environment } from '../../../environments/environment';
 
@@ -23,6 +23,19 @@ export class AuthService {
       email,
       password,
       returnSecureToken: true,
-    });
+    }).pipe(catchError((e) => {
+      let errorMessage = 'An unknown error occured!';
+
+      if (!e?.error?.error) {
+        throw errorMessage;
+      }
+
+      switch (e.error.error.message) {
+        case 'EMAIL_EXISTS':
+          errorMessage = 'This email exists already!';
+      }
+
+      throw(errorMessage);
+    }));
   }
 }
