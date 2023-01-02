@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 
 import { AuthResponseData, AuthService } from './auth.service';
@@ -13,13 +14,13 @@ export class AuthComponent implements OnDestroy {
   isLoading = false;
   error: string = null;
 
-  private _subscriptions: Subscription[] = []
+  private _subscriptions: Subscription[] = [];
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
 
   ngOnDestroy(): void {
-    this._subscriptions.forEach((subscription) => subscription.unsubscribe())
+    this._subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
   onSwitchMode(): void {
@@ -48,6 +49,7 @@ export class AuthComponent implements OnDestroy {
       next: (resData) => {
         console.log(resData);
         this.isLoading = false;
+        this.router.navigate(['/recipes']);
       },
       error: (errorMessage) => {
         this.error = errorMessage;
