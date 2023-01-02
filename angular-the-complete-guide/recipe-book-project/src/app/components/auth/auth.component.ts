@@ -61,4 +61,8 @@ export class AuthComponent implements OnDestroy {
 
     form.reset();
   }
+
+  onHandleError(): void {
+    this.error = null;
+  }
 }

@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { AlertComponent } from './common/components/alert/alert.component';
 import { LoadingSpinnerComponent } from './common/components/loading-spinner/loading-spinner.component';
 import { DropdownDirective } from './common/directives/dropdown.directive';
 import { AuthInterceptorService } from './components/auth/auth-interceptor.service';
@@ -34,6 +35,7 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
     RecipeEditComponent,
     AuthComponent,
     LoadingSpinnerComponent,
+    AlertComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
   providers: [{
