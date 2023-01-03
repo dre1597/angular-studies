@@ -10,18 +10,13 @@ import { AuthComponent } from './components/auth/auth.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RecipesModule } from './components/recipes/recipes.module';
 import { ShoppingListModule } from './components/shopping-list/shopping-list.module';
-import { AlertComponent } from './shared/components/alert/alert.component';
-import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
-import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    DropdownDirective,
     AuthComponent,
-    LoadingSpinnerComponent,
-    AlertComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +25,8 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
     ReactiveFormsModule,
     HttpClientModule,
     RecipesModule,
-    ShoppingListModule
+    ShoppingListModule,
+    SharedModule
   ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
