@@ -5,14 +5,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AlertComponent } from './common/components/alert/alert.component';
-import { LoadingSpinnerComponent } from './common/components/loading-spinner/loading-spinner.component';
-import { DropdownDirective } from './common/directives/dropdown.directive';
 import { AuthInterceptorService } from './components/auth/auth-interceptor.service';
 import { AuthComponent } from './components/auth/auth.component';
 import { HeaderComponent } from './components/header/header.component';
 import { RecipesModule } from './components/recipes/recipes.module';
 import { ShoppingListModule } from './components/shopping-list/shopping-list.module';
+import { AlertComponent } from './shared/components/alert/alert.component';
+import { LoadingSpinnerComponent } from './shared/components/loading-spinner/loading-spinner.component';
+import { DropdownDirective } from './shared/directives/dropdown.directive';
 
 @NgModule({
   declarations: [
