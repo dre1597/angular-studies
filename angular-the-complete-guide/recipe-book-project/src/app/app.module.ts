@@ -11,12 +11,7 @@ import { DropdownDirective } from './common/directives/dropdown.directive';
 import { AuthInterceptorService } from './components/auth/auth-interceptor.service';
 import { AuthComponent } from './components/auth/auth.component';
 import { HeaderComponent } from './components/header/header.component';
-import { RecipeDetailComponent } from './components/recipes/recipe-detail/recipe-detail.component';
-import { RecipeEditComponent } from './components/recipes/recipe-edit/recipe-edit.component';
-import { RecipeItemComponent } from './components/recipes/recipe-list/recipe-item/recipe-item.component';
-import { RecipeListComponent } from './components/recipes/recipe-list/recipe-list.component';
-import { RecipeStartComponent } from './components/recipes/recipe-start/recipe-start.component';
-import { RecipesComponent } from './components/recipes/recipes.component';
+import { RecipesModule } from './components/recipes/recipes.module';
 import { ShoppingEditComponent } from './components/shopping-list/shopping-edit/shopping-edit.component';
 import { ShoppingListComponent } from './components/shopping-list/shopping-list.component';
 
@@ -24,20 +19,21 @@ import { ShoppingListComponent } from './components/shopping-list/shopping-list.
   declarations: [
     AppComponent,
     HeaderComponent,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
     DropdownDirective,
-    RecipeStartComponent,
-    RecipeEditComponent,
     AuthComponent,
     LoadingSpinnerComponent,
     AlertComponent,
   ],
-  imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule, HttpClientModule],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RecipesModule
+  ],
   providers: [{
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptorService,
