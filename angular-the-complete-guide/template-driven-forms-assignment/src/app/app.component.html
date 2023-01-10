@@ -1,0 +1,22 @@
+<form #f="ngForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>Email </label>
+    <input #email="ngModel" id="email" name="email" ngModel required type="email"/>
+    <p *ngIf="!email.valid && email.touched">Please enter a valid email!</p>
+  </div>
+
+  <div>
+    <label>Password </label>
+    <input #password=ngModel id="password" min="3" name="password" ngModel required type="password"/>
+    <p *ngIf="!password.valid && password.touched">Min 3 characters for the password, please!</p>
+  </div>
+  <div>
+    <label for="subcription">Subscription </label>
+    <select [(ngModel)]="subcription" id="subcription" name="subcription">
+      <option value="basic">Basic</option>
+      <option value="advanced">Advanced</option>
+      <option value="pro">Pro</option>
+    </select>
+  </div>
+  <button [disabled]="!f.valid" type="submit">Submit</button>
+</form>
