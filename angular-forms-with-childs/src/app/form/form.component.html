@@ -1,3 +1,30 @@
 <form (submit)="onSubmit()" [formGroup]="parentForm">
-  <app-input [parentForm]="parentForm"></app-input>
+  <app-input
+    [controlName]="'firstName'"
+    [id]="'firstName'"
+    [label]="'First Name'"
+    [name]="'firstName'"
+    [parentForm]="parentForm"
+    [placeholder]="'First Name'"
+  >
+  </app-input>
+  <app-input
+    [controlName]="'lastName'"
+    [id]="'lastName'"
+    [label]="'Last Name'"
+    [name]="'lastName'"
+    [parentForm]="parentForm"
+    [placeholder]="'Last Name'"
+  >
+  </app-input>
+  <app-input
+    [controlName]="'email'"
+    [id]="'email'"
+    [label]="'Email'"
+    [name]="'email'"
+    [parentForm]="parentForm"
+    [placeholder]="'Email'"
+  >
+  </app-input>
+  <button class="btn btn-success">Submit</button>
 </form>

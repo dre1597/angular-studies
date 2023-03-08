@@ -1,12 +1,12 @@
 <div [formGroup]="parentForm" class="form-group">
-  <label>First name</label>
+  <label>{{ label }}</label>
   <input
+    [formControlName]="controlName"
+    [id]="id"
+    [name]="name"
+    [placeholder]="placeholder"
+    [type]="type"
     class="form-control"
-    formControlName="firstName"
-    id="firstName"
-    name="firstName"
-    placeholder="First name"
-    type="text"
   />
-  <button class="btn btn-success">Submit</button>
+
 </div>

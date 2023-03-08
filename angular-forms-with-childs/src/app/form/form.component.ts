@@ -15,7 +15,7 @@ export class FormComponent implements OnInit {
     this.parentForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required, Validators.email],
+      email: ['', [Validators.required, Validators.email]],
     });
   }
 

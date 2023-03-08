@@ -12,6 +12,6 @@ export class InputComponent {
   @Input() placeholder: string;
   @Input() name: string;
   @Input() label: string;
-  @Input() formControlName: string;
+  @Input() controlName: string;
   @Input() parentForm: FormGroup;
 }
