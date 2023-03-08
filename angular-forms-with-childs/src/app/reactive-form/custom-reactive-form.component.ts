@@ -2,11 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss'],
+  selector: 'app-reactive-form',
+  templateUrl: './custom-reactive-form.component.html',
 })
-export class FormComponent implements OnInit {
+export class CustomReactiveFormComponent implements OnInit {
   parentForm: FormGroup;
 
   constructor(private fb: FormBuilder) {}

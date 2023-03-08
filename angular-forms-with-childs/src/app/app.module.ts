@@ -1,15 +1,12 @@
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { InputComponent } from './form/input/input.component';
+import { CustomReactiveFormModule } from './reactive-form/custom-reactive-form.module';
 
 @NgModule({
-  declarations: [AppComponent, FormComponent, InputComponent],
-  imports: [BrowserModule, NgbModule, ReactiveFormsModule],
+  declarations: [AppComponent],
+  imports: [BrowserModule, CustomReactiveFormModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -3,10 +3,9 @@ import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-input',
-  templateUrl: './input.component.html',
-  styleUrls: ['./input.component.scss'],
+  templateUrl: './custom-reactive-form-input.component.html',
 })
-export class InputComponent {
+export class CustomReactiveFormInputComponent {
   @Input() type: string;
   @Input() id: string;
   @Input() placeholder: string;
