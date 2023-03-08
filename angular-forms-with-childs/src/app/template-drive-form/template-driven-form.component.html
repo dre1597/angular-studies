@@ -1,0 +1,27 @@
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <app-template-driven-input
+    #input
+    [id]="'firstName'"
+    [label]="'First Name'"
+    [name]="'firstName'"
+    [placeholder]="'First Name'"
+  >
+  </app-template-driven-input>
+  <app-template-driven-input
+    #input
+    [id]="'lastName'"
+    [label]="'Last Name'"
+    [name]="'lastName'"
+    [placeholder]="'Last Name'"
+  >
+  </app-template-driven-input>
+  <app-template-driven-input
+    #input
+    [id]="'email'"
+    [label]="'Email'"
+    [name]="'email'"
+    [placeholder]="'Email'"
+  >
+  </app-template-driven-input>
+  <button [disabled]="!form.valid" class="btn btn-success" type="submit">Submit template driven</button>
+</form>
