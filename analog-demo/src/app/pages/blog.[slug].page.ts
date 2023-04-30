@@ -1,19 +1,18 @@
-import { Component, inject } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs';
+import { Component } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
+import { injectContent, MarkdownComponent } from '@analogjs/content';
+import { Post } from './posts.page';
 
 @Component({
   selector: 'app-blog-post',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, MarkdownComponent],
   template: `
     <h1>First BLog Post</h1>
 
-    {{ slug$ | async }}
+    {{ (post$ | async)?.content }}
   `
 })
 export default class BlogPostComponent {
-  route = inject(ActivatedRoute);
-  slug$ = this.route.paramMap.pipe(map(params => params.get('slug')));
+  post$ = injectContent<Post>();
 }

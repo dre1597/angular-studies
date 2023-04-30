@@ -4,7 +4,8 @@ import { provideFileRouter } from '@analogjs/router';
 
 import { AppComponent } from './app/app.component';
 import { mainProviders } from './main.providers';
+import { appConfig } from './app/app.config';
 
 bootstrapApplication(AppComponent, {
-  providers: [provideFileRouter(), ...mainProviders],
+  providers: [provideFileRouter(), ...mainProviders, appConfig.providers],
 });
