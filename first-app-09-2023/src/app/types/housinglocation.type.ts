@@ -1,4 +1,4 @@
-export interface HousingLocation {
+export type THousingLocation = {
   id: number;
   name: string;
   city: string;
@@ -7,4 +7,4 @@ export interface HousingLocation {
   availableUnits: number;
   wifi: boolean;
   laundry: boolean;
-}
+};
