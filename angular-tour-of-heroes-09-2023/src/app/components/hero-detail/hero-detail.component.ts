@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
-import { THero } from '../types/hero.type';
+import { THero } from '../../types/hero.type';
 
 @Component({
   selector: 'app-hero-detail',

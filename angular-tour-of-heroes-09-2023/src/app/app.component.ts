@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
-import { HeroesComponent } from './heroes/heroes.component';
-import { MessagesComponent } from './messages/messages.component';
+import { HeroesComponent } from './components/heroes/heroes.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @Component({
   selector: 'app-root',

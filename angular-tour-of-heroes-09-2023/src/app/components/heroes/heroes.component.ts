@@ -2,10 +2,10 @@ import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
-import { HEROES } from '../mocks/heroes.mock';
-import { THero } from '../types/hero.type';
-import { MessageService } from '../message.service';
-import { HeroService } from '../hero.service';
+import { HEROES } from '../../mocks/heroes.mock';
+import { THero } from '../../types/hero.type';
+import { MessageService } from '../../services/message.service';
+import { HeroService } from '../../services/hero.service';
 import { HeroDetailComponent } from '../hero-detail/hero-detail.component';
 
 @Component({
