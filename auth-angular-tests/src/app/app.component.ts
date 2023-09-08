@@ -1,10 +1,12 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { ApiService } from './api.service';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TokenInterceptor } from './token.interceptor';
+import { Subscription } from 'rxjs';
+import { THTTPResponse, TTestTokenResponse, TTokenResponse } from './responses';
 
 @Component({
   selector: 'app-root',
@@ -20,41 +22,60 @@ import { TokenInterceptor } from './token.interceptor';
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
   ],
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy {
   protected token = '';
   private readonly apiService = inject(ApiService);
+  private subscriptions: Subscription[] = [];
 
-  public ngOnInit() {
-    this.apiService.token.subscribe({
-      next: (token) => {
+  public ngOnInit(): void {
+    const subscription = this.apiService.token.subscribe({
+      next: (token: string): void => {
         this.token = token;
         localStorage.setItem('token', token);
       },
-      error: (error) => {
+      error: (error): void => {
         console.error(error);
       },
     });
+
+    this.subscriptions.push(subscription);
+  }
+
+  public ngOnDestroy(): void {
+    this.subscriptions.forEach((subscription) => subscription.unsubscribe());
   }
 
   protected login(): void {
-    this.apiService.login().subscribe({
-      next: (response) => {
-        this.apiService.token.next(response.token);
-      },
-      error: (error) => {
-        alert(error?.message);
+    const subscription = this.apiService.login().subscribe({
+      next: (response: THTTPResponse<TTokenResponse>): void => {
+        if (response.error) {
+          alert(response.error.message);
+          return;
+        }
+
+        if (response.data) {
+          this.token = response.data.token;
+        }
       },
     });
+
+    this.subscriptions.push(subscription);
   }
 
   protected testToken(): void {
-    this.apiService.testToken().subscribe({
-      next: (response) => {
-        alert(response.message);
-      },
-      error: (error) => {
-        alert(error?.message);
+    const subscription = this.apiService.testToken().subscribe({
+      next: (response: THTTPResponse<TTestTokenResponse>): void => {
+        if (response.error) {
+          alert(response.error.message);
+          return;
+        }
+
+        if (response.data) {
+          alert(response.data.message);
+        }
       },
     });
+
+    this.subscriptions.push(subscription);
   }
 }

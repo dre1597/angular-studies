@@ -20,7 +20,7 @@ app.get('/verify', (req, res) => {
   console.info('Hit /verity route');
   const tokenOnHeader = req.headers.authorization
 
-  tokenOnHeader?.split(' ')[1] === token ? res.json({ message: 'OK' }) : res.status(401).json('Unauthorized');
+  tokenOnHeader?.split(' ')[1] === token ? res.json({ message: 'OK' }) : res.status(401).json('Unauthorized! Missing or invalid token');
 });
 
 const port = 3000;
