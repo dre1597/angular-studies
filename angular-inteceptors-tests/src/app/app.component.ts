@@ -2,11 +2,12 @@ import { AsyncPipe } from '@angular/common';
 import { Component, inject, OnDestroy, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { Subscription } from 'rxjs';
 
 import { ApiService } from './api.service';
 import { TokenInterceptor } from './token.interceptor';
-import { Subscription } from 'rxjs';
-import { THTTPResponse, TTestTokenResponse, TTokenResponse } from './responses';
+import { TTestTokenResponse, TTokenResponse } from './responses';
+import { handleApiError } from './api-error';
 
 @Component({
   selector: 'app-root',
@@ -47,16 +48,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
   protected login(): void {
     const subscription = this.apiService.login().subscribe({
-      next: (response: THTTPResponse<TTokenResponse>): void => {
-        if (response.error) {
-          alert(response.error.message);
-          return;
-        }
-
-        if (response.data) {
-          this.token = response.data.token;
+      next: (response: TTokenResponse): void => {
+        if (response.token) {
+          this.token = response.token;
         }
       },
+      error: handleApiError,
     });
 
     this.subscriptions.push(subscription);
@@ -64,16 +61,12 @@ export class AppComponent implements OnInit, OnDestroy {
 
   protected testToken(): void {
     const subscription = this.apiService.testToken().subscribe({
-      next: (response: THTTPResponse<TTestTokenResponse>): void => {
-        if (response.error) {
-          alert(response.error.message);
-          return;
-        }
-
-        if (response.data) {
-          alert(response.data.message);
+      next: (response: TTestTokenResponse): void => {
+        if (response.message) {
+          alert(response.message);
         }
       },
+      error: handleApiError,
     });
 
     this.subscriptions.push(subscription);

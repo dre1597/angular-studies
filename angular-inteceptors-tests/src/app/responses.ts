@@ -14,5 +14,4 @@ export type TTestTokenResponse = {
 export type TErrorResponse = {
   message: string;
   status: number;
-  statusText: string;
 };
