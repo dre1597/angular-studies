@@ -5,7 +5,7 @@ import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Subscription } from 'rxjs';
 
 import { ApiService } from './api.service';
-import { TokenInterceptor } from './token.interceptor';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 import { TTestTokenResponse, TTokenResponse } from './responses';
 import { handleApiError } from './api-error';
 
