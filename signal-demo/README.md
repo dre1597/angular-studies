@@ -1,5 +1,7 @@
 # SignalDemo
 
+This project was based on this [repository](https://github.com/joshuamorony/signals-rxjs-demo-fetch). Checkout
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
