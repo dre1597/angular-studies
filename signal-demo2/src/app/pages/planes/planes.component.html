@@ -1,0 +1,25 @@
+<mat-card class="m1">
+  <mat-card-content>
+    <app-planes-list/>
+  </mat-card-content>
+  <mat-card-footer>
+    <mat-slide-toggle
+        (change)="displayDescriptions($event.checked)"
+        [disabled]="store.$loading()"
+        class="m1 p1">
+      Display Descriptions
+    </mat-slide-toggle>
+  </mat-card-footer>
+</mat-card>
+
+<mat-card *ngIf="store.$items().length" class="m1">
+  <mat-card-content>
+    <app-planes-page-indicator/>
+  </mat-card-content>
+</mat-card>
+
+<mat-card *ngIf="store.$items().length" class="m1">
+  <mat-card-content>
+    <app-planes-list-progress/>
+  </mat-card-content>
+</mat-card>
