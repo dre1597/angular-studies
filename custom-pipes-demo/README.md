@@ -1,5 +1,7 @@
 # CustomPipesDemo
 
+Checkout this [article](https://blog.bitsrc.io/mastering-custom-pipes-in-angular-31-real-world-examples-2023-c7ce8ec7faae) for more details.
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.1.
 
 ## Development server
