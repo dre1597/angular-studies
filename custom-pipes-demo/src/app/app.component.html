@@ -5,3 +5,5 @@
 <ul>
   <li *ngFor="let item of items | filterArray:'category':'Electronics'">{{ item.name }}</li>
 </ul>
+
+<p>{{ 'This is a long text that should be truncated' | truncateText:20 }}</p>

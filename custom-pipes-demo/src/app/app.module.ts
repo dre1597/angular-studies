@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { UppercaseFirstPipe } from './pipes/uppercase-first.pipe';
 import { ReverseStringPipe } from './pipes/reverse-string.pipe';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
+import { TruncateTextPipe } from './pipes/truncate-text.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UppercaseFirstPipe,
     ReverseStringPipe,
-    FilterArrayPipe
+    FilterArrayPipe,
+    TruncateTextPipe
   ],
   imports: [
     BrowserModule
