@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { UppercaseFirstPipe } from './pipes/uppercase-first.pipe';
 import { ReverseStringPipe } from './pipes/reverse-string.pipe';
+import { FilterArrayPipe } from './pipes/filter-array.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     UppercaseFirstPipe,
-    ReverseStringPipe
+    ReverseStringPipe,
+    FilterArrayPipe
   ],
   imports: [
     BrowserModule
