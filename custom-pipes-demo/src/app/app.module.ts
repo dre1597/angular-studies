@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UppercaseFirstPipe } from './pipes/uppercase-first.pipe';
+import { ReverseStringPipe } from './pipes/reverse-string.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UppercaseFirstPipe
+    UppercaseFirstPipe,
+    ReverseStringPipe
   ],
   imports: [
     BrowserModule
