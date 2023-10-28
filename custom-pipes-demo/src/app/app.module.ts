@@ -6,6 +6,7 @@ import { UppercaseFirstPipe } from './pipes/uppercase-first.pipe';
 import { ReverseStringPipe } from './pipes/reverse-string.pipe';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
 import { TruncateTextPipe } from './pipes/truncate-text.pipe';
+import { SortArrayPipe } from './pipes/sort-array.pipe';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { TruncateTextPipe } from './pipes/truncate-text.pipe';
     UppercaseFirstPipe,
     ReverseStringPipe,
     FilterArrayPipe,
-    TruncateTextPipe
+    TruncateTextPipe,
+    SortArrayPipe
   ],
   imports: [
     BrowserModule
