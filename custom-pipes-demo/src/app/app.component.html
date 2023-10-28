@@ -11,3 +11,5 @@
 <ul>
   <li *ngFor="let item of items | sortArray:'price':'asc'">{{ item.name }} - {{ item.price }}</li>
 </ul>
+
+<p>{{ 100 | currencyConverter:1.2 }}</p>

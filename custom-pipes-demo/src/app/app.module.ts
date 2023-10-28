@@ -7,6 +7,7 @@ import { ReverseStringPipe } from './pipes/reverse-string.pipe';
 import { FilterArrayPipe } from './pipes/filter-array.pipe';
 import { TruncateTextPipe } from './pipes/truncate-text.pipe';
 import { SortArrayPipe } from './pipes/sort-array.pipe';
+import { CurrencyConverterPipe } from './pipes/currency-converter.pipe';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { SortArrayPipe } from './pipes/sort-array.pipe';
     ReverseStringPipe,
     FilterArrayPipe,
     TruncateTextPipe,
-    SortArrayPipe
+    SortArrayPipe,
+    CurrencyConverterPipe
   ],
   imports: [
     BrowserModule
