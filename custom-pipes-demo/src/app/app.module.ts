@@ -17,6 +17,7 @@ import { PercentChangePipe } from './pipes/percent-change.pipe';
 import { InitialsPipe } from './pipes/initials-pipe.pipe';
 import { StripHtmlTagsPipe } from './pipes/strip-html-tags.pipe';
 import { CamelCaseToSpacesPipe } from './pipes/camel-case-to-spaces.pipe';
+import { TitleCasePipe } from './pipes/title-case.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { CamelCaseToSpacesPipe } from './pipes/camel-case-to-spaces.pipe';
     InitialsPipe,
     StripHtmlTagsPipe,
     CamelCaseToSpacesPipe,
+    TitleCasePipe,
   ],
   imports: [
     BrowserModule
