@@ -16,6 +16,7 @@ import { TimeAgoPipe } from './pipes/time-ago.pipe';
 import { PercentChangePipe } from './pipes/percent-change.pipe';
 import { InitialsPipe } from './pipes/initials-pipe.pipe';
 import { StripHtmlTagsPipe } from './pipes/strip-html-tags.pipe';
+import { CamelCaseToSpacesPipe } from './pipes/camel-case-to-spaces.pipe';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { StripHtmlTagsPipe } from './pipes/strip-html-tags.pipe';
     TimeAgoPipe,
     PercentChangePipe,
     InitialsPipe,
-    StripHtmlTagsPipe
+    StripHtmlTagsPipe,
+    CamelCaseToSpacesPipe,
   ],
   imports: [
     BrowserModule
