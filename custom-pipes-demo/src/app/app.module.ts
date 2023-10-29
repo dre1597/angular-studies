@@ -14,6 +14,7 @@ import { FileSizePipe } from './pipes/file-size.pipe';
 import { MarkdownToHtmlPipe } from './pipes/markdown-to-html.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 import { PercentChangePipe } from './pipes/percent-change.pipe';
+import { InitialsPipe } from './pipes/initials-pipe.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { PercentChangePipe } from './pipes/percent-change.pipe';
     FileSizePipe,
     MarkdownToHtmlPipe,
     TimeAgoPipe,
-    PercentChangePipe
+    PercentChangePipe,
+    InitialsPipe
   ],
   imports: [
     BrowserModule
