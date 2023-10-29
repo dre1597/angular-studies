@@ -11,7 +11,7 @@ type Item = {
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  items: Item[] = [
+  protected items: Item[] = [
     { category: 'Electronics', name: 'TV', price: 500 },
     { category: 'Books', name: 'The Lord of the Rings', price: 50 },
     { category: 'Books', name: 'Harry Potter', price: 30 },
@@ -19,8 +19,9 @@ export class AppComponent {
     { category: 'Electronics', name: 'Mobile', price: 500 },
   ]
 
-  markdownText = `
+  protected markdownText = `
     # Angular Pipes Demo
     This is a markdown text that should be rendered as HTML
   `
+  protected someTimestamp: Date = new Date();
 }
