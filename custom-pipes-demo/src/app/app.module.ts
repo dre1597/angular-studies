@@ -12,6 +12,7 @@ import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
 import { PhoneNumberFormatterUsPipe } from './pipes/phone-number-formatter-us.pipe';
 import { FileSizePipe } from './pipes/file-size.pipe';
 import { MarkdownToHtmlPipe } from './pipes/markdown-to-html.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { MarkdownToHtmlPipe } from './pipes/markdown-to-html.pipe';
     PhoneNumberFormatterPipe,
     PhoneNumberFormatterUsPipe,
     FileSizePipe,
-    MarkdownToHtmlPipe
+    MarkdownToHtmlPipe,
+    TimeAgoPipe
   ],
   imports: [
     BrowserModule
