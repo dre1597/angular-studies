@@ -10,6 +10,7 @@ import { SortArrayPipe } from './pipes/sort-array.pipe';
 import { CurrencyConverterPipe } from './pipes/currency-converter.pipe';
 import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
 import { PhoneNumberFormatterUsPipe } from './pipes/phone-number-formatter-us.pipe';
+import { FileSizePipe } from './pipes/file-size.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PhoneNumberFormatterUsPipe } from './pipes/phone-number-formatter-us.pi
     SortArrayPipe,
     CurrencyConverterPipe,
     PhoneNumberFormatterPipe,
-    PhoneNumberFormatterUsPipe
+    PhoneNumberFormatterUsPipe,
+    FileSizePipe
   ],
   imports: [
     BrowserModule
