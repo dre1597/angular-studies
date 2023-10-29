@@ -15,6 +15,7 @@ import { MarkdownToHtmlPipe } from './pipes/markdown-to-html.pipe';
 import { TimeAgoPipe } from './pipes/time-ago.pipe';
 import { PercentChangePipe } from './pipes/percent-change.pipe';
 import { InitialsPipe } from './pipes/initials-pipe.pipe';
+import { StripHtmlTagsPipe } from './pipes/strip-html-tags.pipe';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { InitialsPipe } from './pipes/initials-pipe.pipe';
     MarkdownToHtmlPipe,
     TimeAgoPipe,
     PercentChangePipe,
-    InitialsPipe
+    InitialsPipe,
+    StripHtmlTagsPipe
   ],
   imports: [
     BrowserModule
