@@ -18,4 +18,9 @@ export class AppComponent {
     { category: 'Electronics', name: 'Laptop', price: 1000 },
     { category: 'Electronics', name: 'Mobile', price: 500 },
   ]
+
+  markdownText = `
+    # Angular Pipes Demo
+    This is a markdown text that should be rendered as HTML
+  `
 }

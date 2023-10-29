@@ -11,6 +11,7 @@ import { CurrencyConverterPipe } from './pipes/currency-converter.pipe';
 import { PhoneNumberFormatterPipe } from './pipes/phone-number-formatter.pipe';
 import { PhoneNumberFormatterUsPipe } from './pipes/phone-number-formatter-us.pipe';
 import { FileSizePipe } from './pipes/file-size.pipe';
+import { MarkdownToHtmlPipe } from './pipes/markdown-to-html.pipe';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FileSizePipe } from './pipes/file-size.pipe';
     CurrencyConverterPipe,
     PhoneNumberFormatterPipe,
     PhoneNumberFormatterUsPipe,
-    FileSizePipe
+    FileSizePipe,
+    MarkdownToHtmlPipe
   ],
   imports: [
     BrowserModule
@@ -31,4 +33,4 @@ import { FileSizePipe } from './pipes/file-size.pipe';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
