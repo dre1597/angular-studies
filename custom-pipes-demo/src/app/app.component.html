@@ -73,3 +73,7 @@
 <p>{{ 1984 | romanNumeral }}</p>
 
 <p>{{ 'this is a sentence. this is another. the third.' | sentenceCase }}</p>
+
+<ul>
+  <li *ngFor="let item of 'apple,banana,cherry' | csvToArray">{{ item }}</li>
+</ul>

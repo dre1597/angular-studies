@@ -30,6 +30,7 @@ import { ArrayShufflePipe } from './pipes/array-shuffle.pipe';
 import { ColorContrastPipe } from './pipes/color-contrast.pipe';
 import { RomanNumeralPipe } from './pipes/roman-numeral.pipe';
 import { SentenceCasePipe } from './pipes/sentence-case.pipe';
+import { CsvToArrayPipe } from './pipes/csv-to-array.pipe';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { SentenceCasePipe } from './pipes/sentence-case.pipe';
     ColorContrastPipe,
     RomanNumeralPipe,
     SentenceCasePipe,
+    CsvToArrayPipe,
   ],
   imports: [
     BrowserModule,
