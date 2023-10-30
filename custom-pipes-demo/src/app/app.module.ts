@@ -18,6 +18,8 @@ import { InitialsPipe } from './pipes/initials-pipe.pipe';
 import { StripHtmlTagsPipe } from './pipes/strip-html-tags.pipe';
 import { CamelCaseToSpacesPipe } from './pipes/camel-case-to-spaces.pipe';
 import { TitleCasePipe } from './pipes/title-case.pipe';
+import { MaskedInputPipe } from './pipes/masked-input.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -38,9 +40,11 @@ import { TitleCasePipe } from './pipes/title-case.pipe';
     StripHtmlTagsPipe,
     CamelCaseToSpacesPipe,
     TitleCasePipe,
+    MaskedInputPipe,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
