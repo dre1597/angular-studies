@@ -61,3 +61,7 @@
 <p>{{ 7 | ordinalNumber }}</p>
 
 <p>{{ 'This is a URL-friendly title!' | urlify }}</p>
+
+<ul>
+  <li *ngFor="let item of items | arrayShuffle">{{ item.name }} - {{ item.price }}</li>
+</ul>

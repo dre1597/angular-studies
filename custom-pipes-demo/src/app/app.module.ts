@@ -26,6 +26,7 @@ import { JsonPrettyPrintPipe } from './pipes/json-pretty-print.pipe';
 import { PasswordStrengthPipe } from './pipes/password-strength.pipe';
 import { OrdinalNumberPipe } from './pipes/ordinal-number.pipe';
 import { UrlifyPipe } from './pipes/urlify.pipe';
+import { ArrayShufflePipe } from './pipes/array-shuffle.pipe';
 
 @NgModule({
   declarations: [
@@ -53,6 +54,7 @@ import { UrlifyPipe } from './pipes/urlify.pipe';
     PasswordStrengthPipe,
     OrdinalNumberPipe,
     UrlifyPipe,
+    ArrayShufflePipe,
   ],
   imports: [
     BrowserModule,
