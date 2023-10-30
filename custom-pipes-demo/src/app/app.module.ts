@@ -23,6 +23,7 @@ import { FormsModule } from '@angular/forms';
 import { PluralizePipe } from './pipes/pluralize.pipe';
 import { HumanizeDurationPipe } from './pipes/humanize-duration.pipe';
 import { JsonPrettyPrintPipe } from './pipes/json-pretty-print.pipe';
+import { PasswordStrengthPipe } from './pipes/password-strength.pipe';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { JsonPrettyPrintPipe } from './pipes/json-pretty-print.pipe';
     PluralizePipe,
     HumanizeDurationPipe,
     JsonPrettyPrintPipe,
+    PasswordStrengthPipe,
   ],
   imports: [
     BrowserModule,
