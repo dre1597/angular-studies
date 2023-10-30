@@ -34,6 +34,14 @@
 
 <p>{{ '1234567890' | maskedInput :  '(***) ***-****' }}</p>
 
-<p>{{ 1 | pluralize:'item' }}</p>
+<p>{{ 'item' | pluralize:1 }}</p>
 
-<p>{{ 5 | pluralize:'item' }}</p>
+<p>{{ 'item' | pluralize:5 }}</p>
+
+<p>{{ 7200 | humanizeDuration }}</p>
+
+<p>{{ 150 | humanizeDuration }}</p>
+
+<p>{{ 30 | humanizeDuration }}</p>
+
+<p>{{ 0 | humanizeDuration }}</p>

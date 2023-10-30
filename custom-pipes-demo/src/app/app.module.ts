@@ -21,6 +21,7 @@ import { TitleCasePipe } from './pipes/title-case.pipe';
 import { MaskedInputPipe } from './pipes/masked-input.pipe';
 import { FormsModule } from '@angular/forms';
 import { PluralizePipe } from './pipes/pluralize.pipe';
+import { HumanizeDurationPipe } from './pipes/humanize-duration.pipe';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { PluralizePipe } from './pipes/pluralize.pipe';
     TitleCasePipe,
     MaskedInputPipe,
     PluralizePipe,
+    HumanizeDurationPipe,
   ],
   imports: [
     BrowserModule,
