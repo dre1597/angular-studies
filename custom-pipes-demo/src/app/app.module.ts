@@ -20,6 +20,7 @@ import { CamelCaseToSpacesPipe } from './pipes/camel-case-to-spaces.pipe';
 import { TitleCasePipe } from './pipes/title-case.pipe';
 import { MaskedInputPipe } from './pipes/masked-input.pipe';
 import { FormsModule } from '@angular/forms';
+import { PluralizePipe } from './pipes/pluralize.pipe';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { FormsModule } from '@angular/forms';
     CamelCaseToSpacesPipe,
     TitleCasePipe,
     MaskedInputPipe,
+    PluralizePipe,
   ],
   imports: [
     BrowserModule,
