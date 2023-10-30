@@ -22,6 +22,7 @@ import { MaskedInputPipe } from './pipes/masked-input.pipe';
 import { FormsModule } from '@angular/forms';
 import { PluralizePipe } from './pipes/pluralize.pipe';
 import { HumanizeDurationPipe } from './pipes/humanize-duration.pipe';
+import { JsonPrettyPrintPipe } from './pipes/json-pretty-print.pipe';
 
 @NgModule({
   declarations: [
@@ -45,6 +46,7 @@ import { HumanizeDurationPipe } from './pipes/humanize-duration.pipe';
     MaskedInputPipe,
     PluralizePipe,
     HumanizeDurationPipe,
+    JsonPrettyPrintPipe,
   ],
   imports: [
     BrowserModule,

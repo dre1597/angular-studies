@@ -24,4 +24,9 @@ export class AppComponent {
     This is a markdown text that should be rendered as HTML
   `
   protected someTimestamp: Date = new Date();
+
+  protected  someJsonObject = {
+    name: 'John Doe',
+    age: 30
+  }
 }
