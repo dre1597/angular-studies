@@ -65,3 +65,7 @@
 <ul>
   <li *ngFor="let item of items | arrayShuffle">{{ item.name }} - {{ item.price }}</li>
 </ul>
+
+<div [style.background-color]="'#3498db'" [style.color]="'#3498db' | colorContrast">
+  Text with contrast
+</div>

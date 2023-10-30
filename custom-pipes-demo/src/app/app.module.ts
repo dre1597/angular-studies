@@ -27,6 +27,7 @@ import { PasswordStrengthPipe } from './pipes/password-strength.pipe';
 import { OrdinalNumberPipe } from './pipes/ordinal-number.pipe';
 import { UrlifyPipe } from './pipes/urlify.pipe';
 import { ArrayShufflePipe } from './pipes/array-shuffle.pipe';
+import { ColorContrastPipe } from './pipes/color-contrast.pipe';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ArrayShufflePipe } from './pipes/array-shuffle.pipe';
     OrdinalNumberPipe,
     UrlifyPipe,
     ArrayShufflePipe,
+    ColorContrastPipe,
   ],
   imports: [
     BrowserModule,
