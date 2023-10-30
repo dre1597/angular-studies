@@ -29,6 +29,7 @@ import { UrlifyPipe } from './pipes/urlify.pipe';
 import { ArrayShufflePipe } from './pipes/array-shuffle.pipe';
 import { ColorContrastPipe } from './pipes/color-contrast.pipe';
 import { RomanNumeralPipe } from './pipes/roman-numeral.pipe';
+import { SentenceCasePipe } from './pipes/sentence-case.pipe';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { RomanNumeralPipe } from './pipes/roman-numeral.pipe';
     ArrayShufflePipe,
     ColorContrastPipe,
     RomanNumeralPipe,
+    SentenceCasePipe,
   ],
   imports: [
     BrowserModule,
