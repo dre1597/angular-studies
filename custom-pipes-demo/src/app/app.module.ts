@@ -28,6 +28,7 @@ import { OrdinalNumberPipe } from './pipes/ordinal-number.pipe';
 import { UrlifyPipe } from './pipes/urlify.pipe';
 import { ArrayShufflePipe } from './pipes/array-shuffle.pipe';
 import { ColorContrastPipe } from './pipes/color-contrast.pipe';
+import { RomanNumeralPipe } from './pipes/roman-numeral.pipe';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { ColorContrastPipe } from './pipes/color-contrast.pipe';
     UrlifyPipe,
     ArrayShufflePipe,
     ColorContrastPipe,
+    RomanNumeralPipe,
   ],
   imports: [
     BrowserModule,
