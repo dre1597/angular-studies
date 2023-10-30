@@ -25,6 +25,7 @@ import { HumanizeDurationPipe } from './pipes/humanize-duration.pipe';
 import { JsonPrettyPrintPipe } from './pipes/json-pretty-print.pipe';
 import { PasswordStrengthPipe } from './pipes/password-strength.pipe';
 import { OrdinalNumberPipe } from './pipes/ordinal-number.pipe';
+import { UrlifyPipe } from './pipes/urlify.pipe';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { OrdinalNumberPipe } from './pipes/ordinal-number.pipe';
     JsonPrettyPrintPipe,
     PasswordStrengthPipe,
     OrdinalNumberPipe,
+    UrlifyPipe,
   ],
   imports: [
     BrowserModule,
