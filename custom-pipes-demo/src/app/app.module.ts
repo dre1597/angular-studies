@@ -31,6 +31,7 @@ import { ColorContrastPipe } from './pipes/color-contrast.pipe';
 import { RomanNumeralPipe } from './pipes/roman-numeral.pipe';
 import { SentenceCasePipe } from './pipes/sentence-case.pipe';
 import { CsvToArrayPipe } from './pipes/csv-to-array.pipe';
+import { SlugifyPipe } from './pipes/slugify.pipe';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { CsvToArrayPipe } from './pipes/csv-to-array.pipe';
     RomanNumeralPipe,
     SentenceCasePipe,
     CsvToArrayPipe,
+    SlugifyPipe,
   ],
   imports: [
     BrowserModule,
