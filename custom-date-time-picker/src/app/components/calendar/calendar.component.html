@@ -1,0 +1,122 @@
+<div class="container">
+  <div class="calendar">
+    <div class="month">
+      <span (click)="prev()" class="cal-icon">
+        <img alt="arrow down icon" class="arrow-left" src="./assets/arrow-down.svg"/>
+      </span>
+
+      <div class="date">
+        <span class="calendar-title">
+          <span
+            (selectMonth)="setMonth($event)"
+            [listData]="months"
+            [selected]="date.getMonth()"
+            appList
+          >
+            {{ months[date.getMonth()] }}
+            <img alt="arrow down icon" class="arrow-down" src="./assets/arrow-down.svg"/>
+          </span>
+          <span
+            (selectYear)="setYear($event)"
+            [listData]="getYearRange()"
+            [selected]="15"
+            appList
+          >
+            {{ date.getFullYear()}}
+            <img alt="arrow down icon" class="arrow-down" src="./assets/arrow-down.svg"/>
+          </span>
+        </span>
+      </div>
+      <span (click)="next()" class="cal-icon">
+        <img alt="arrow down icon" class="arrow-right" src="./assets/arrow-down.svg"/>
+      </span>
+    </div>
+    <div class="weekdays">
+      <div appList="test">Mon</div>
+      <div>Tue</div>
+      <div>Wed</div>
+      <div>Thu</div>
+      <div>Fri</div>
+      <div>Sat</div>
+      <div>Sun</div>
+    </div>
+    <div class="days">
+      <div *ngFor="let day of prevDays" class="prev-date">
+        {{ day }}
+      </div>
+
+      <div
+        (click)="setDate(i)"
+        *ngFor="let day of currentDaysArray; let i = index"
+        [ngClass]="{
+          today:
+            currentDay.getDate() === i + 1 &&
+            date.getMonth() === currentDay.getMonth() &&
+            date.getFullYear() === currentDay.getFullYear(),
+          selected:
+            clickedDate?.getDate() === i + 1 &&
+            clickedDate?.getMonth() === date?.getMonth() &&
+            clickedDate?.getFullYear() === date?.getFullYear()
+        }"
+      >
+        {{ day.day }}
+        <span
+          *ngIf="day.total.hours > 0 || day.total.minutes > 0"
+          class="total-hours"
+        >
+          {{ day?.total?.hours }}:{{ day?.total?.minutes }}
+        </span>
+      </div>
+
+      <div *ngFor="let day of lastDays" class="next-date">
+        {{ day }}
+      </div>
+    </div>
+    <div class="time">
+      <form [formGroup]="timeForm">
+        <div class="number">
+          <input
+            [class.error]="!timeForm.get('hours').valid"
+            [value]="timeForm.get('hours').value | number : '2.0'"
+            formControlName="hours"
+            type="number"
+          />
+          <div class="number__actions">
+            <span
+              (click)="increase(timeTypes.HOURS)"
+              class="number__actions__item"
+            >+</span
+            >
+            <span
+              (click)="decrease(timeTypes.HOURS)"
+              class="number__actions__item"
+            >-</span
+            >
+          </div>
+        </div>
+        <span class="time-span">:</span>
+        <div class="number">
+          <input
+            [class.error]="!timeForm.get('minutes').valid"
+            [value]="timeForm.get('minutes').value | number : '2.0'"
+            formControlName="minutes"
+            type="number"
+          />
+          <div class="number__actions">
+            <span
+              (click)="increase(timeTypes.MINUTES)"
+              class="number__actions__item"
+            >+</span
+            >
+            <span
+              (click)="decrease(timeTypes.MINUTES)"
+              class="number__actions__item"
+            >-</span
+            >
+          </div>
+        </div>
+      </form>
+      <button (click)="confirm()" [disabled]="!clickedDate || !timeForm.valid" class="confirm">OK</button>
+    </div>
+  </div>
+</div>
