@@ -1,0 +1,42 @@
+<div class="header u-unselectable header-animated mb-0">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a
+      ><h6 class="title">🥜<span class="text-red-700">Ng</span><span class="text-blue-500">Cashew</span></h6></a
+      >
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-right">
+      <div [routerLinkActiveOptions]="{ exact: true }" [routerLinkActive]="'active'" class="nav-item">
+        <a [routerLink]="['/']">
+<span class="icon mr-1">
+<i aria-hidden="true" class="fas fa-wrapper fa-home"></i>
+  </span>
+          Home
+        </a>
+      </div>
+      <div [routerLinkActive]="'active'" class="nav-item">
+        <a [routerLink]="['/posts']">
+<span class="icon mr-1">
+<i aria-hidden="true" class="fas fa-wrapper fa-flask"></i>
+  </span>
+          Posts
+        </a>
+      </div>
+      <div [routerLinkActive]="'active'" class="nav-item">
+        <a [routerLink]="['/users']">
+<span class="icon mr-1">
+<i aria-hidden="true" class="fas fa-wrapper fa-user"></i>
+  </span>
+          Users
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

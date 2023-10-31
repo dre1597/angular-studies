@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
+This project is a demo based on this [post](https://zakimohammed.medium.com/cache-angular-http-request-using-ngneat-cashew-8ca66e4c7297).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

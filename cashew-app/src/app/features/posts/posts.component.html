@@ -1,0 +1,24 @@
+<div class="section">
+  <div class="content">
+    <div *ngFor="let post of posts$ | async" class="row mb-3">
+      <div class="col-sm-4">
+        <img
+          (error)="getDefaultImage($event)"
+          [src]="getImage(post)"
+          alt="img-stretch"
+          class="img-stretch u-round-md"
+          height="400" />
+      </div>
+      <div class="col-lg-6 col-md-8">
+        <h3>{{ post.title | titlecase }}</h3>
+        <p>{{ post.body }}</p>
+        <div>
+          <span class="icon">
+            <i aria-hidden="true" class="far fa-wrapper fa-clock"></i>
+          </span>
+          {{ randomDate | date : 'fullDate' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
