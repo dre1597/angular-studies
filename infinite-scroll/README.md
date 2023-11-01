@@ -2,6 +2,8 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.8.
 
+This project was based on this [article](https://javascript.plainenglish.io/infinite-scrolling-in-angular-a-hassle-free-implementation-f1fef11e44d1).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
