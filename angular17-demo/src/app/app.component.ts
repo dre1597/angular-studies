@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
 
+import { UserComponent } from './user.component';
+
 @Component({
   selector: 'app-root',
   template: `
-    Hello {{ city }}, {{ 1 + 1 }}
+    <section>
+      <app-user/>
+    </section>
   `,
-  styles: `
-    :host {
-      color: #a144eb;
-    }
-  `,
+  imports: [UserComponent],
   standalone: true,
 })
 export class AppComponent {
-  city = 'San Francisco';
 }
