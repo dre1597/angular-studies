@@ -3,8 +3,15 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    Welcome to Angular!
+    Hello {{ city }}, {{ 1 + 1 }}
+  `,
+  styles: `
+    :host {
+      color: #a144eb;
+    }
   `,
   standalone: true,
 })
-export class AppComponent {}
+export class AppComponent {
+  city = 'San Francisco';
+}
