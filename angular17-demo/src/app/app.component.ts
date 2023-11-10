@@ -1,16 +1,16 @@
 import { Component } from '@angular/core';
 
-import { UserComponent } from './user.component';
-
 @Component({
   selector: 'app-root',
   template: `
-    <section>
-      <app-user/>
-    </section>
+    @if (isServerRunning) {
+    <span>Yes, the server is running</span>
+    } @else {
+    <span>No, the server is not running</span>
+    }
   `,
-  imports: [UserComponent],
   standalone: true,
 })
 export class AppComponent {
+  isServerRunning = true;
 }
