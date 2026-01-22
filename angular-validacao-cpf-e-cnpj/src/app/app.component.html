@@ -1,0 +1,30 @@
+<section>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <form [formGroup]="form" novalidate>
+                    <div class="mb-3">
+                        <label for="cpf">CPF</label>
+                        <input type="text" mask="000.000.000.00" formControlName="cpf" class="form-control" placeholder="CPF">
+                        <div *ngIf="form.controls['cpf'].invalid && (form.controls['cpf'].dirty || form.controls['cpf'].touched)"
+                        class="alert alert-danger">
+                            <div *ngIf="form.controls['cpf'].errors">
+                            O CPF é obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" mask="00.000.000/0000-00" formControlName="cnpj" class="form-control" placeholder="CNPJ">
+                        <div *ngIf="form.controls['cnpj'].invalid && (form.controls['cnpj'].dirty || form.controls['cnpj'].touched)"
+                        class="alert alert-danger">
+                            <div *ngIf="form.controls['cnpj'].errors">
+                            O CNPJ é obrigatório.
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

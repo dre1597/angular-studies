@@ -1,0 +1,83 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Mouse",
+      "price": 15.90,
+      "sale": false,
+      "salePrice": 0,
+      "image": "mouse.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Keyboard",
+      "price": 30.00,
+      "sale": false,
+      "salePrice": 0,
+      "image": "keyboard.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Monitor",
+      "price": 250.00,
+      "sale": false,
+      "salePrice": 0,
+      "image": "monitor.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Notebook",
+      "price": 3000.00,
+      "sale": true,
+      "salePrice": 999.90,
+      "image": "notebook.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Headset",
+      "price": 10.50,
+      "sale": false,
+      "salePrice": 0,
+      "image": "headset.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Webcam",
+      "price": 90.00,
+      "sale": true,
+      "salePrice": 49.99,
+      "image": "webcam.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Phone",
+      "price": 3000.00,
+      "sale": false,
+      "salePrice": 0,
+      "image": "phone.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Mousepad",
+      "price": 5.50,
+      "sale": false,
+      "salePrice": 0,
+      "image": "mousepad.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Go Pro",
+      "price": 300.00,
+      "sale": false,
+      "salePrice": 0,
+      "image": "gopro.jpg"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<div class="container main-container">
+
+  <app-product-count></app-product-count>
+
+  <div class="row text-center">
+
+    <app-product-details
+      (changeStatus)="changeStatus($event)"
+      *ngFor="let product of products;"
+      [product]="product"
+      class="col-md-4"
+      style="padding-bottom: 30px;"
+    >
+
+    </app-product-details>
+
+  </div>
+</div>

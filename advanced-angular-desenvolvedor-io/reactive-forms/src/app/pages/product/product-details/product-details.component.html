@@ -1,0 +1,38 @@
+<div class="card h-100">
+  <div style="align-content:center;">
+    <img alt="" height="164px" src="/assets/{{ product.image }}" width="253px">
+  </div>
+
+  <h4 class="card-title">{{ product.name | titlecase }}</h4>
+
+  <div>
+    <p *ngIf="product.active; else outOfStock">In stock</p>
+
+    <ng-template #outOfStock>
+      <p>Out of stock</p>
+    </ng-template>
+  </div>
+
+  <div class="card-body">
+    <div *ngIf="product.active; else notifyWhenArrives">
+      <h4>{{ product.value | currency:'BRL':'symbol':'1.2-2':'pt' }}</h4>
+    </div>
+  </div>
+
+  <ng-template #notifyWhenArrives>
+    <div>
+      <h4>Notify me when arrives</h4>
+    </div>
+  </ng-template>
+
+  <div class="card-footer">
+    <button
+      (click)="changeStatus.emit(product)"
+      [ngClass]="product.active ? 'btn-warning' : 'btn-success'"
+      class="btn"
+      type="button"
+    >
+      {{  product.active ? 'Desactivate' : 'Activate' }}
+    </button>
+  </div>
+</div>
